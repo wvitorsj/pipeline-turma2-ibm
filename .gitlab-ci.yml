@@ -8,7 +8,7 @@ build:
   - echo "Olá Alunos"
   - echo "Da Turma 2 IBM" 
 
-job:
+test:
   stage: test
   script:
   - echo "Olá Alunos"
