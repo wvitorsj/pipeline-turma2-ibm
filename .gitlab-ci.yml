@@ -1,0 +1,4 @@
+job:
+  script:
+  - echo "Olá Alunos"
+  - echo "Da Turma 2 IBM"
