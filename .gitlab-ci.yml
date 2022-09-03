@@ -1,10 +1,18 @@
+stages:
+- build
+- test
+
+build:  
+  stage: build
+  script:
+  - echo "Olá Alunos"
+  - echo "Da Turma 2 IBM" 
+
 job:
+  stage: test
   script:
   - echo "Olá Alunos"
   - echo "Da Turma 2 IBM"
   - echo "If Black Then Code"
 
-build:
-  script:
-  - echo "Olá Alunos"
-  - echo "Da Turma 2 IBM" 
+
