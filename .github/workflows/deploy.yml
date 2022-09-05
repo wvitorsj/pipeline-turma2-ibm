@@ -7,12 +7,25 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-    - name: Validando o Pacote JAVA
+    - uses: actions/checkout@v3
+    - name: Set up JDK 17
+      uses: actions/checkout@v3
+      with:
+        java-version: '17'
+        distribution: 'zulu'
+    - name: Validando o Pacote JAVA  
       run: - mvn package -Dmaven.test.skip
 
   test:
     runs-on: ubuntu-20.04
     needs: build
+    
     steps:
+     - uses: actions/checkout@v3
+    - name: Set up JDK 17
+      uses: actions/checkout@v3
+      with:
+        java-version: '17'
+        distribution: 'zulu'
     - name: Roda o Teste de Unidade
       run: - mvn test
