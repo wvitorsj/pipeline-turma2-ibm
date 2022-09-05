@@ -1,3 +1,5 @@
+image: maven
+
 stages:
 - build
 - test
@@ -5,8 +7,7 @@ stages:
 build:  
   stage: build
   script:
-  - echo "Olá Alunos"
-  - echo "Da Turma 2 IBM" 
+  - mvn package -Dmaven.test.skip
 
 test:
   stage: test
