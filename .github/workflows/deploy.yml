@@ -21,11 +21,11 @@ jobs:
     needs: build
 
     steps:
-     - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
     - name: Set up JDK 17
       uses: actions/checkout@v3
       with:
         java-version: '17'
         distribution: 'zulu'
     - name: Roda o Teste de Unidade
-      run: - mvn test
+      run:  mvn test
