@@ -14,12 +14,12 @@ jobs:
         java-version: '17'
         distribution: 'zulu'
     - name: Validando o Pacote JAVA  
-      run: - mvn package -Dmaven.test.skip
+      run: mvn package -Dmaven.test.skip
 
   test:
     runs-on: ubuntu-20.04
     needs: build
-    
+
     steps:
      - uses: actions/checkout@v3
     - name: Set up JDK 17
